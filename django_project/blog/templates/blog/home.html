@@ -17,11 +17,21 @@
 </head>
 
 <body>
-  {% for post in posts %}
-  <h1>{{ post.title }}</h1>
-  <p>By {{ post.author }} on {{ post.date_posted }}</p>
-  <p>{{ post.content }}</p>
-  {% endfor %}
+  <nav class="nav justify-content-center">
+    <a class="nav-link active" href="/about">about</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" href="#">Disabled link</a>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>By {{ post.author }} on {{ post.date_posted }}</p>
+        <p>{{ post.content }}</p>
+      {% endfor %}
+    </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
